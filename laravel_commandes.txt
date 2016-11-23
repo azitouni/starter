@@ -1,0 +1,31 @@
+
+/* Framwork Laravel v4.2 : creation base de donnée rapide */
+
+(1) installer le dossier "starter" dans le dossier htdocs      // repertoire C:\xampp\htdocs\
+(2) demarrer xampp en localhost
+(3) créer une base de donnée avec phpMySql et la nommée "laravel" ou
+  (3.1) nommée la 'toto' et modifier le parametrage dans le fichier 'app/config/database.php' ligne 58: 'database'  => 'toto'
+(4) lancer la commande "git bash here" dans le dossier starter // repertoire C:\xampp\htdocs\starter
+
+(5)curl -s https://getcomposer.org/installer | php	(recuperation composer)
+(6)set PATH=%PATH%;C:/xampp/php/php.exe 		(definition de la variable global) pas toujours nécessaire
+(7)php composer.phar install 				(installation composer)
+(8)php artisan migrate --env=local 			(créé un fichier dans la base de données en local)
+(9)php artisan migrate // (*)				(création de table)
+(10)php artisan db:seed --env=local 			(mettre a jours les champs des diffèrentes tables de la base de donneé crée précédament)
+
+//  commandes annexes
+
+(*) $ php artisan migrate:rollback (retour en arrière)
+
+// ouvrir les fichiers suivant dans un editeur de texte
+
+composer.json // repertoire C:\xampp\htdocs\starter\composer.json
+app.php       // repertoire C:\xampp\htdocs\starter\app\config\app.php
+2013_02_05_043505_create_posts_table.php // repertoire C:\xampp\htdocs\starter\composer.json
+RolesTableSeeder.php // repertoire C:\xampp\htdocs\starter\app\database\seeds\RolesTableSeeder.php
+
+// mot de passe
+
+id: admin
+pwd: admin
